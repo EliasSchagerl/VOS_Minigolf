@@ -17,8 +17,8 @@ struct Directory: View {
         .padding(EdgeInsets(top: 36, leading: 0, bottom: 0, trailing: 0))
         .ornament(attachmentAnchor: .scene(.top)) {
             HStack {
-                Image(systemName: "vision.pro")
-                Text("visionOS Lectures")
+                Image(systemName: "figure.golf")
+                Text("Minigolf")
             }
             .font(.largeTitle)
             .padding(20)

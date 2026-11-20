@@ -10,7 +10,6 @@ import SwiftUI
 @main
 struct visionOSLecturesApp: App {
 
-    @State private var viewModel = ViewModel()
     @State private var modelData = ModelData()
     @State private var exampleImmersionStyle: ImmersionStyle = .full
 
@@ -20,7 +19,6 @@ struct visionOSLecturesApp: App {
         // Main window
         WindowGroup {
             Directory()
-                .environment(viewModel)
                 .environment(modelData)
                 .preferredWindowClippingMargins(.all, 100)
         }

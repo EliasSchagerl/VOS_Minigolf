@@ -7,29 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC26C61130A2494C00041501 /* RCPCustomComponents in Embed Frameworks */ = {isa = PBXBuildFile; productRef = FC37C17C30A1FAD100AC0CCB /* RCPCustomComponents */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		FC37C17D30A1FAD100AC0CCB /* RCPCustomComponents in Frameworks */ = {isa = PBXBuildFile; productRef = FC37C17C30A1FAD100AC0CCB /* RCPCustomComponents */; };
-		FC37C18030A1FB3A00AC0CCB /* RealityKitScripting in Frameworks */ = {isa = PBXBuildFile; productRef = FC37C17F30A1FB3A00AC0CCB /* RealityKitScripting */; };
-		FC50F79630A1FE620043BA88 /* visionOS Lectures.realitycomposerpro in Resources */ = {isa = PBXBuildFile; fileRef = FC50F79530A1FE620043BA88 /* visionOS Lectures.realitycomposerpro */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		FC26C61230A2494C00041501 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				FC26C61130A2494C00041501 /* RCPCustomComponents in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FC3F78952EA59B8E007B32F1 /* Minigolf_Simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minigolf_Simulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC50F79530A1FE620043BA88 /* visionOS Lectures.realitycomposerpro */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "visionOS Lectures.realitycomposerpro"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -43,19 +24,7 @@
 				App/Views/LabDetail.swift = (xros, );
 				App/Views/LabList.swift = (xros, );
 				App/Views/LabRouter.swift = (xros, );
-				Labs/Lab001.swift = (xros, );
-				Labs/Lab002.swift = (xros, );
-				Labs/Lab003.swift = (xros, );
-				Labs/Lab004.swift = (xros, );
-				Labs/Lab005.swift = (xros, );
-				Labs/Lab006.swift = (xros, );
-				Labs/Lab007.swift = (xros, );
-				Labs/Lab008.swift = (xros, );
-				Labs/Lab009.swift = (xros, );
-				Labs/Lab010.swift = (xros, );
-				Labs/Lab011.swift = (xros, );
-				Labs/Lab012.swift = (xros, );
-				Labs/Lab013.swift = (xros, );
+				Labs/LabMinigolf.swift = (xros, );
 			};
 			target = FC3F78942EA59B8E007B32F1 /* Minigolf_Simulator */;
 		};
@@ -70,11 +39,6 @@
 			path = "visionOS Lectures";
 			sourceTree = "<group>";
 		};
-		FC50F79330A1FE340043BA88 /* Scripts */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Scripts;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC37C18030A1FB3A00AC0CCB /* RealityKitScripting in Frameworks */,
-				FC37C17D30A1FAD100AC0CCB /* RCPCustomComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,9 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				FC3F78972EA59B8E007B32F1 /* visionOS Lectures */,
-				FC3F78982EA59B8E007B32F1 /* Packages */,
-				FC50F79330A1FE340043BA88 /* Scripts */,
-				FC50F79530A1FE620043BA88 /* visionOS Lectures.realitycomposerpro */,
 				FC3F78962EA59B8E007B32F1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,13 +68,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FC3F78982EA59B8E007B32F1 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Packages;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,7 +78,6 @@
 				FC3F78912EA59B8E007B32F1 /* Sources */,
 				FC3F78922EA59B8E007B32F1 /* Frameworks */,
 				FC3F78932EA59B8E007B32F1 /* Resources */,
-				FC26C61230A2494C00041501 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,12 +85,9 @@
 			);
 			fileSystemSynchronizedGroups = (
 				FC3F78972EA59B8E007B32F1 /* visionOS Lectures */,
-				FC50F79330A1FE340043BA88 /* Scripts */,
 			);
 			name = Minigolf_Simulator;
 			packageProductDependencies = (
-				FC37C17C30A1FAD100AC0CCB /* RCPCustomComponents */,
-				FC37C17F30A1FB3A00AC0CCB /* RealityKitScripting */,
 			);
 			productName = "visionOS Lectures";
 			productReference = FC3F78952EA59B8E007B32F1 /* Minigolf_Simulator.app */;
@@ -170,8 +118,6 @@
 			mainGroup = FC3F788C2EA59B8E007B32F1;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				FC37C17B30A1FAD100AC0CCB /* XCLocalSwiftPackageReference "Packages/RCPCustomComponents" */,
-				FC37C17E30A1FB3A00AC0CCB /* XCRemoteSwiftPackageReference "RealityKitScripting" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FC3F78962EA59B8E007B32F1 /* Products */;
@@ -188,7 +134,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC50F79630A1FE620043BA88 /* visionOS Lectures.realitycomposerpro in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +163,7 @@
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_FILE = "visionOS Lectures/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -252,7 +197,7 @@
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_FILE = "visionOS Lectures/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -417,35 +362,6 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		FC37C17B30A1FAD100AC0CCB /* XCLocalSwiftPackageReference "Packages/RCPCustomComponents" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = Packages/RCPCustomComponents;
-		};
-/* End XCLocalSwiftPackageReference section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		FC37C17E30A1FB3A00AC0CCB /* XCRemoteSwiftPackageReference "RealityKitScripting" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/RealityKitScripting.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		FC37C17C30A1FAD100AC0CCB /* RCPCustomComponents */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RCPCustomComponents;
-		};
-		FC37C17F30A1FB3A00AC0CCB /* RealityKitScripting */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FC37C17E30A1FB3A00AC0CCB /* XCRemoteSwiftPackageReference "RealityKitScripting" */;
-			productName = RealityKitScripting;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FC3F788D2EA59B8E007B32F1 /* Project object */;
 }

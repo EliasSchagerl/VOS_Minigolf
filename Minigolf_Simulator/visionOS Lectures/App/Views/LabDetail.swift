@@ -36,8 +36,6 @@ struct LabDetail: View {
                 VStack(alignment: .leading) {
                     Text("\(lab.title) - \(lab.subtitle)")
                         .font(.title)
-                    Text("\(lab.date.formatted(date: .long, time: .omitted))")
-                        .font(.subheadline)
                 }
                 Text(.init(lab.description))
                 if(lab.success == false) {

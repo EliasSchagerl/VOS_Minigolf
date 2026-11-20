@@ -5,7 +5,7 @@
 ### Ziel
 Entwicklung einer kleinen Mixed-Reality-Minogolf-Anwendung für visionOS. Die erste Version soll innerhalb weniger Minuten erlebbar sein und zunächst nur die grundlegenden Spielelemente enthalten.
 
-Beim Start erscheint ein großer, kamera-relativ vor dem Spieler schwebender Hebel. Der Spieler greift den Hebel mit der Hand (bzw. per Maus im Simulator) und zieht ihn nach unten. Sobald der Hebel einen definierten Auslösewinkel erreicht, erscheint ein einfaches Minigolf-Setup mit:
+Beim Start erscheint ein großer, nutzerrelativ am Immersive-Space-Ursprung vor dem Spieler schwebender Hebel. Der Spieler greift den Hebel mit der Hand (bzw. per Maus im Simulator) und zieht ihn nach unten. Sobald der Hebel einen definierten Auslösewinkel erreicht, erscheint ein einfaches Minigolf-Setup mit:
 
 - einem Golfschläger (Putter),
 - einem Golfball,
@@ -17,7 +17,7 @@ Die erste Version benötigt weder Raumerkennung noch Hindernisse oder eine autom
 ### Technischer Rahmen
 
 - **Plattform:** Apple visionOS
-- **Deployment Target:** visionOS 2.0+ (vor Start explizit in Xcode festlegen; bestimmte APIs wie `SpatialTapGesture` sind versionsabhängig)
+- **Deployment Target:** visionOS 26.0 (im bestehenden Xcode-Projekt bereits gesetzt; damit sind alle benötigten RealityKit-APIs verfügbar)
 - **Entwicklungsumgebung:** Xcode
 - **Programmiersprache:** Swift
 - **3D-Darstellung und Interaktion:** RealityKit
@@ -39,7 +39,7 @@ Die Anwendung wird in kleine, voneinander getrennte Komponenten aufgeteilt. Sie 
 | Bestandteil | Beschreibung |
 |---|---|
 | Immersive Szene | Eine Mixed-Reality-Szene, in der die reale Umgebung sichtbar bleibt |
-| Start-Hebel | Ein großer Hebel schwebt kamera-relativ vor dem Spieler (~1,2 m, leicht unter Augenhöhe) |
+| Start-Hebel | Ein großer Hebel schwebt nutzerrelativ am Immersive-Space-Ursprung vor dem Spieler (~1,2 m, leicht unter Augenhöhe) |
 | Handinteraktion | Der Spieler kann den Hebel greifen und nach unten ziehen; Maus-/Trackpad-Drag als Simulator-Fallback |
 | Auslösebedingung | Beim Erreichen eines Winkels von ~60° an der X-Achse wird das Setup erzeugt |
 | Spielfläche | Eine einfache grüne Fläche als visuelle Grundlage |
@@ -84,7 +84,7 @@ Diese Punkte können nach Fertigstellung und Test des MVP schrittweise ergänzt 
 **Ziel:** Die offenen technischen Fragen klären, bevor Implementierungscode entsteht.
 
 Aufgaben:
-- Deployment Target in Xcode explizit auf visionOS 2.0+ setzen.
+- Deployment Target prüfen: im bestehenden Projekt bereits auf visionOS 26.0 gesetzt, keine Änderung nötig.
 - Bestehendes Projekt öffnen und Inventar aufnehmen: welche Labs/Assets werden entfernt, welche bleiben als Vorlage.
 - Drag-Interaktion an einer Test-Entity nachweisen (bestehender `HoverRotateModifier` als Basis, Maus-Fallback im Simulator).
 - Kamera-relative Platzierung und ein gemeinsames `setupRoot` verifizieren.
@@ -146,7 +146,7 @@ Aufgaben:
 - Den Putter zunächst aus einfachen Formen (Cylinder + Box) zusammensetzen.
 - Das Golfloch mit dunkler Öffnung und sichtbarem Ring-Rand (Torus) gestalten.
 - Eine feste Anordnung und Abstände zwischen Ball, Schläger und Loch definieren.
-- Alle Objekte unter einem gemeinsamen `setupRoot` platzieren (kamera-relativ, gleiche Basis wie der Hebel).
+- Alle Objekte unter einem gemeinsamen `setupRoot` platzieren (nutzerrelativ am Immersive-Space-Ursprung, gleiche Basis wie der Hebel).
 - Die Objekte erst nach erfolgreicher Hebelbetätigung zur Szene hinzufügen und beim Reset als Gruppe entfernen.
 
 **Ergebnis:** Nach der Aktivierung erscheinen Spielfläche, Putter, Ball und Loch in einer zusammenhängenden Anordnung unter `setupRoot`; beim Reset verschwinden sie gemeinsam.
@@ -171,7 +171,7 @@ Aufgaben:
 
 Aufgaben:
 - Start und Öffnen des Immersive Space auf Simulator und Gerät testen.
-- Sichtbarkeit und kamera-relative Position des Hebels prüfen.
+- Sichtbarkeit und nutzerrelativ am Immersive-Space-Ursprunge Position des Hebels prüfen.
 - Greifen und Herunterziehen mit der Hand auf dem Gerät testen.
 - Maus-/Trackpad-Fallback im Simulator ausführlich testen (verschiedene Ausgangspositionen, Winkelgrenzen).
 - Prüfen, ob der Auslösepunkt bei ≈ 60° zuverlässig erkannt wird.
@@ -220,7 +220,8 @@ Minigolf_Simulator/
     ├── Modifier/
     │   └── HoverRotateModifier.swift    (bestehend – Vorlage für Drag-Interaktion)
     │
-    └── Model/                           (bestehend, falls benötigt)
+    └── Model/
+        └── DirectoryModel.swift         (bestehend – auf Minigolf-Eintrag reduziert)
 ```
 
 ### Aufgaben der wichtigsten Dateien
@@ -273,7 +274,7 @@ Für den Hebel ist besonders wichtig, dass der bewegliche Griff getrennt vom fes
 |---|---|
 | Darstellung | Mixed Reality; reale Umgebung bleibt sichtbar |
 | Projektbasis | Bestehendes `Minigolf_Simulator.xcodeproj`, ungenutzte Inhalte entfernen |
-| Deployment Target | visionOS 2.0+ |
+| Deployment Target | visionOS 26.0 (bereits im Projekt gesetzt) |
 | Platzierung | Kamera-relativ, ~1,2 m vor der Kamera, leicht unter Augenhöhe; Setup unter `setupRoot` |
 | Hebelbewegung | Rotation um die X-Achse, 0°–60°, danach Rückführung in Ausgangsposition |
 | Interaktionsart | Handbasierte Drag-Interaktion auf dem Gerät; Maus-/Trackpad-Drag als Simulator-Fallback |
@@ -286,6 +287,8 @@ Für den Hebel ist besonders wichtig, dass der bewegliche Griff getrennt vom fes
 | Hindernisse | Erst in einer späteren Ausbaustufe |
 
 **Hinweis zur Interaktion:** Die konkrete Implementierung der Handinteraktion muss an die verwendete visionOS-Version und die verfügbaren RealityKit-APIs angepasst werden. Greifen, Ziehen, Kollisionsabfragen, Winkelbegrenzung und die Maus-/Trackpad-Variante sind eigene Implementierungsaufgaben und werden nicht automatisch durch das 3D-Modell bereitgestellt. Der bestehende `HoverRotateModifier` dient als Startpunkt.
+
+**Hinweis zur Platzierung:** `AnchorEntity(.camera)` ist auf visionOS **nicht verfügbar**. Stattdessen wird der Immersive-Space-Ursprung als Bezugspunkt genutzt: Der Nutzer startet am Ursprung und blickt entlang -Z, eine Entity bei `[0, -0.15, -1.2]` liegt damit etwa 1,2 m vor ihm. Diese Root-Entity (`setupRoot`) wird auch für das Minigolf-Setup verwendet. (In Phase 0/1 verifiziert.)
 
 ---
 
@@ -331,7 +334,7 @@ Die erste Version gilt als fertig, wenn alle folgenden Punkte erfüllt sind:
 
 - [ ] Die bestehende visionOS-App startet nach dem Entfernen ungenutzter Inhalte ohne Fehler.
 - [ ] Die immersive Mixed-Reality-Szene wird geöffnet.
-- [ ] Ein großer Hebel erscheint kamera-relativ vor dem Spieler.
+- [ ] Ein großer Hebel erscheint nutzerrelativ am Immersive-Space-Ursprung vor dem Spieler.
 - [ ] Der Hebel kann auf dem visionOS-Gerät mit der Hand gegriffen werden.
 - [ ] Der Hebel lässt sich über Maus-/Trackpad-Drag im Simulator bedienen.
 - [ ] Der Hebel lässt sich kontrolliert um die X-Achse bis ~60° ziehen.
