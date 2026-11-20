@@ -1,0 +1,30 @@
+__type: "dynamic_object_definition"
+__uuid: "0e7f6836-83e6-40a5-77ec-e0104630d20b"
+properties: [
+	{
+		__uuid: "ac9c21fc-6507-e2f3-adcb-083af3d969fa"
+		name: "radius"
+		value_definition: {
+			__uuid: "0dbb0888-3828-d46c-ff09-41c784d29efd"
+			value_type: {
+				__type: "dynamic_value_definition_value_type"
+				__uuid: "a833980b-3ab2-7394-2cfa-74089d6f82c9"
+				data_type: 6
+			}
+		}
+	}
+	{
+		__uuid: "e8981812-79cf-3491-e7ab-7c80320c7496"
+		name: "isTriggered"
+		display_index: 1
+		value_definition: {
+			__uuid: "679e24c2-3daf-c78a-21c5-0a887d177d58"
+			value_type: {
+				__type: "dynamic_value_definition_value_type"
+				__uuid: "c49b32a1-8118-f0d7-3883-4a3be1dfe7b7"
+			}
+		}
+	}
+]
+source_plugin: "RCPCustomComponents"
+__asset_uuid: "97ae1720-08b4-3bb0-2fce-a8f495885d3c"

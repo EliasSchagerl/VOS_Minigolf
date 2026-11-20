@@ -1,0 +1,17 @@
+__type: "dynamic_object_definition"
+__uuid: "086af2fb-564f-09c5-eac5-5a7f52f7b3a1"
+properties: [
+	{
+		__uuid: "8b1c8769-2841-9382-0974-6a9d36ba499b"
+		name: "showAxes"
+		value_definition: {
+			__uuid: "dfeb69bd-3ebd-8fdd-55e6-f4062d825cf9"
+			value_type: {
+				__type: "dynamic_value_definition_value_type"
+				__uuid: "afcb4fe2-f9a7-5446-6e7c-2f7615e872d5"
+			}
+		}
+	}
+]
+source_plugin: "RCPCustomComponents"
+__asset_uuid: "7c11c3d4-1071-a4b7-0800-3d17a490aaa7"

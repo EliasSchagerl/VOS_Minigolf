@@ -1,0 +1,33 @@
+{
+  "originHash" : "b2b0625dc523ba7f89d5ed71b20ecbede4d6b938110f1eb5772823574c8faaec",
+  "pins" : [
+    {
+      "identity" : "reality-composer-pro-plugin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/reality-composer-pro-plugin",
+      "state" : {
+        "revision" : "d540ed58002f31c1e12b5350a3c61b5d1deafc0f",
+        "version" : "1.1.0"
+      }
+    },
+    {
+      "identity" : "realitykitscripting",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/RealityKitScripting.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "860a42d1ef76ce37f89a279a469099600606814d"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-syntax.git",
+      "state" : {
+        "revision" : "79e4b74a295b6eb74a8b585e3a39d29e70c1dbd1",
+        "version" : "603.0.2"
+      }
+    }
+  ],
+  "version" : 3
+}

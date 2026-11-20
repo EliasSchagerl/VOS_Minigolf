@@ -1,0 +1,43 @@
+__type: "dynamic_object_definition"
+__uuid: "5cca12c8-fb88-0253-0fab-e8f3491e0e71"
+properties: [
+	{
+		__uuid: "9787a94c-c984-fecf-083f-fd21a15a7736"
+		name: "isEnabled"
+		value_definition: {
+			__uuid: "b3fff807-e0a7-304c-67c3-29c8d136dcee"
+			value_type: {
+				__type: "dynamic_value_definition_value_type"
+				__uuid: "2475cd49-e972-f5ad-3193-c76f0b6448d9"
+			}
+		}
+	}
+	{
+		__uuid: "7d3a0cd6-1d26-f78e-80a2-29f5ddcec04e"
+		name: "speed"
+		display_index: 1
+		value_definition: {
+			__uuid: "7e0a3738-dc47-b9ec-02a2-3beca57dc8bc"
+			value_type: {
+				__type: "dynamic_value_definition_value_type"
+				__uuid: "b49e8fe9-5531-979a-8c6b-90ce637b0812"
+				data_type: 6
+			}
+		}
+	}
+	{
+		__uuid: "e388bda6-bc26-0f02-2aea-7e662f250806"
+		name: "axis"
+		display_index: 2
+		value_definition: {
+			__uuid: "1c71d187-a7c3-295b-cfbc-52ae3ce67ca1"
+			value_type: {
+				__type: "dynamic_value_definition_value_type"
+				__uuid: "a432b287-057f-4bc8-005a-430c89241687"
+				data_type: 8
+			}
+		}
+	}
+]
+source_plugin: "RCPCustomComponents"
+__asset_uuid: "4fc0d1bc-1e74-5301-a0bd-86f3ad98814e"

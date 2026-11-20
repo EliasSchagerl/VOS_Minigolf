@@ -1,0 +1,35 @@
+__type: "tm_custom_action_definition"
+__uuid: "efb06d91-e843-7bb1-c035-328231595789"
+display_name: "SampleBounceAction"
+dynamic_definition: {
+	__uuid: "2400714a-0c55-3292-0e33-0dfcb3213c43"
+	properties: [
+		{
+			__uuid: "080ed92b-ad23-a63c-febf-9f6d9778b751"
+			name: "bounceHeight"
+			value_definition: {
+				__uuid: "9dd9667a-705b-1d43-dde0-dd1aea2b51f6"
+				value_type: {
+					__type: "dynamic_value_definition_value_type"
+					__uuid: "c0f558c5-43d5-2fa4-59cc-f01f4b12bc62"
+					data_type: 6
+				}
+			}
+		}
+		{
+			__uuid: "ac4c37d2-c3ad-1960-b4be-76ae7084c744"
+			name: "bounceFrequency"
+			display_index: 1
+			value_definition: {
+				__uuid: "8c498bbd-93b9-b520-9b76-e15dff0fd856"
+				value_type: {
+					__type: "dynamic_value_definition_value_type"
+					__uuid: "e49da2b7-30c8-19c0-0430-5a1d1f3f7771"
+					data_type: 6
+				}
+			}
+		}
+	]
+	source_plugin: "RCPCustomComponents"
+}
+__asset_uuid: "96d58ac0-aedd-ff06-5bc2-7d36008835fa"

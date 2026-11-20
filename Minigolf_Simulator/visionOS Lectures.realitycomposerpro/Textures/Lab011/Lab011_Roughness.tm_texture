@@ -1,0 +1,33 @@
+__type: "tm_texture"
+__uuid: "c98d9d12-d049-2f39-b7c7-c198a44a0177"
+source_filename: "/Users/Tempuno/Documents/Einzelunternehmen Michael Temper/Projekte/FH Hagenberg/Projekte/Xcode Vorlesungen/visionOS Lectures/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/Textures/Lab011/Lab011_Roughness.png"
+source_texture: "88fabb1d-22d7-56c2-3902-6ed23e9bedf4"
+transform: "dbdb0d4a0b9144f5"
+transform_settings: {
+	__uuid: "0a5a0cdc-a9d8-e62c-acbe-dba3f1fcdf36"
+	__prototype_type: "tm_creation_graph"
+	__prototype_uuid: "565f9a46-b719-d76a-7eaa-36e7faaddc5f"
+	graph: {
+		__uuid: "ce7e4680-cd33-be34-383e-9c728d034fbc"
+		__prototype_type: "tm_graph"
+		__prototype_uuid: "31ddc72a-62d2-0d6e-83b1-392db7f56278"
+		interface: {
+			__uuid: "13e3f4d6-8b81-54f3-05ec-facc91a10fb1"
+			__prototype_type: "tm_graph_interface"
+			__prototype_uuid: "fafb8c6f-264f-0609-fc29-68fbe0d040c1"
+		}
+	}
+}
+color_space: {
+	__uuid: "22b4a3d8-e0b9-babd-e640-ebe6f9ddd966"
+	color_primary: 1
+	transfer_function: 2
+	color_model: 1
+}
+__asset_uuid: "d669d645-2499-d89f-e846-8c1d65048b2f"
+__asset_labels: [
+	"e4bec38d8f73f423"
+]
+__asset_thumbnail: {
+	__uuid: "34167108-81e2-8d03-79a7-7a9d6bfdbb62"
+}
